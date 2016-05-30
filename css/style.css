@@ -4,3 +4,49 @@ movie-nav .list-inline>li a {font-size: large;}
 
 movie-nav .list-inline > li > a:hover { background-color: lightgrey; text-decoration: none;}
 movie-nav .list-inline > li > a.active { background-color: #337AB7; color: white;}
+
+.btn-link{
+	background-color: darkblue;
+	border: 1px solid grey;
+	border-radius: 15px;
+	font-size: large;
+	color: #fff;
+	padding: 5px 20px;
+	margin: 60px;
+	text-decoration: none;
+
+}
+.btn-link:hover{
+	background-color: lightblue;
+	text-decoration: none
+}
+
+div .home-page{
+	background:transparent;
+	font-size: large;
+	text-align: center;
+}
+div .home-page h1{
+	background:tranparent;
+	font-size: 300%
+}
+
+div.repeat:nth-child(6n+1) { 
+	
+	clear: both
+}
+/* Portrait tablets and small desktops  col-sm*/
+@media (min-width: 768px) and (max-width: 991px){
+	div.repeat:nth-child(3n+1){clear:both}
+}
+/* Landscape phones and portrait tablets  col-xs*/
+@media (max-width: 767px) {
+  div.repeat:nth-child(2n+1){ clear: both}
+ 
+}
+ 
+/* Portrait phones and smaller  col-xs*/
+@media (max-width: 480px) {
+  div.repeat:nth-child(2n+1) { clear: both}
+ 
+}

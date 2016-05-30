@@ -7,6 +7,10 @@ angular.module('moviesDBApp', ['ngRoute','movieDBControllers','movieDBDirectives
 .config(function($routeProvider) {
 		 
 		$routeProvider
+		  .when('/',{
+		  		templateUrl:'templates/home.html',
+		  		controller:'HomeController'
+		  })
 		  .when('/popular', {
 		  	templateUrl: 'templates/movies.html',
 		  	controller: 'MovieListController'
@@ -23,5 +27,14 @@ angular.module('moviesDBApp', ['ngRoute','movieDBControllers','movieDBDirectives
 			templateUrl: "templates/movies.html",
 			controller: "MovieNowPlayingController"
 		})
-		  .otherwise({redirectTo: '/popular'}); 
+		  .when('/movie/:movieId', {
+                 templateUrl: 'templates/movieDetails.html',
+                 controller: 'MovieDetailsController'
+            })
+		  .when("/error/:message/:status",{
+		  	templateUrl:"templates/error.html",
+		  	controller: "MovieErrorController"
+		  })
+
+		  .otherwise({redirectTo: '/'}); 
 	});
